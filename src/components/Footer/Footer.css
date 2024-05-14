@@ -1,0 +1,18 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.socials {
+  display: flex;
+  gap: 2em;
+  margin: 0 auto;
+}
+
+.links {
+  display: flex;
+  gap: 4em;
+  margin: 0 auto;
+  margin-bottom: 1.5em;
+}

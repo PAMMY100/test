@@ -30,26 +30,28 @@
 .item:hover {
   transform: scale(1.05);
   transition: 0.6s;
-  border: 0.125rem solid #00a4aa;
+  border: 0.125rem solid rgb(120, 69, 69);
 }
 
 .item img {
   width: 200px
 }
 
-button {
+.product-btn {
   margin: 0 auto;
   padding: 10px 12px;
-  color: #717171;
-  border: 0.125rem solid #717171;
-  background: #fff;
+  color: white;
+  border: 0.125rem solid;
+  background: rgb(120, 69, 69);
   border-radius: 10px;
   width: 100px;
   margin-bottom: 20px;
-  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  transition: 0.6s ease-in-out;
 }
 
 button:hover {
-  border: 0.125rem solid #00a4aa;
-  color: #00a4aa;
+  border: 0.125rem solid rgb(120, 69, 69);
+  background-color: white;
+  color: rgb(120, 69, 69);
 }

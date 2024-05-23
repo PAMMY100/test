@@ -7,7 +7,6 @@ const Item = (props) => {
 
   const addItemToCart = () => {
     dispatch(cartActions.addToCart({ id, category, img, price}))
-    console.log('clicked')
   }
 
   return (
@@ -15,7 +14,7 @@ const Item = (props) => {
       <img src={props.img} alt={props.category}/>
       <p>{props.category}</p>
       <p className="item-price">${props.price}</p>
-      <button onClick={addItemToCart}>Add to Cart</button>
+      <button className='product-btn' onClick={addItemToCart}>Add to Cart</button>
     </div>
   )
 }

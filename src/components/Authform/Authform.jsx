@@ -1,35 +1,24 @@
-import { Form, Link, useSearchParams, useNavigation } from 'react-router-dom'
+import { Form, Link, useSearchParams, useNavigation, useActionData } from 'react-router-dom'
 import './Authform.css'
-import { useState } from 'react';
 
 
 const Authform = () => {
-  const [passwordAreNotEqual, setPasswordAreNotEqual] = useState(false)
-
-  const [searchParams] = useSearchParams();
+   const [searchParams] = useSearchParams();
   const nagivation = useNavigation();
+  const data = useActionData()
 
   const isLogin = searchParams.get('mode') === 'login'
   const isSubmitting = nagivation.state === 'submitting'
-
-  function handleSubmit(event) {
-    event.preventDefault();
-
-    const fd = new FormData(event.target)
-    const data = Object.fromEntries(fd.entries);
-
-    if (data.password !== data['confirmPass']) {
-      setPasswordAreNotEqual(true)
-    }
-
-    console.log(data);
-  }
-
 
   return (
     <>
       <Form method="post" className='form'>
         <h1>{isLogin ? 'Log in' : 'Sign up'}</h1>
+        {data && data.errors && <ul>
+          {Object.values(data.errors).map((err) =>
+          <li key={err}>{err}</li>)}
+        </ul>}
+        {data && data.message && <p>{data.message}</p>}
         <p>
           <label htmlFor="email">Email</label>
           <input
@@ -56,10 +45,9 @@ const Authform = () => {
             minLength={6}
             required />
         </p>}
-        {passwordAreNotEqual && <p>Passwords must match.</p>}
         <div className='actions'>
           <Link to={`?mode= ${isLogin ? 'signup' : 'login'}`}>{isLogin ? 'Register' : 'Login'}</Link>
-          <button onClick={handleSubmit}>{isSubmitting ? 'Submitting...' : `${isLogin ? 'Login' : 'Save'}`}</button>
+          <button>{isSubmitting ? 'Submitting...' : `${isLogin ? 'Login' : 'Save'}`}</button>
         </div>
       </Form>
     </>

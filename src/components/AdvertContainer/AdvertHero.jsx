@@ -94,8 +94,8 @@ const AdvertHero = () => {
       >
         {
           slider.map(data => (
-            <SwiperSlide style={{ backgroundImage: `url(${data.url})`}} className='myswiper-slider'>
-              <div>
+            <SwiperSlide style={{ backgroundImage: `url(${data.url})`}} className='myswiper-slider' >
+              <div key={data.title}>
                 <h2>{data.title}</h2>
                 <p>{data.desription}</p>
                 <Link to='/login' className='slider-btn'>explore</Link>

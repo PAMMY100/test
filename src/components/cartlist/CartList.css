@@ -1,12 +1,11 @@
-.cart-items {
+.cart-item {
   display: flex;
-  margin-left: 5%;
   justify-content:center;
   align-items: center;
   width: 650px;
 }
 
-.cart-items img {
+.cart-item img {
   height: 100px;
   width: 100px;
   object-fit: cover;
@@ -15,16 +14,21 @@
   margin-right: 10px;
 }
 
-.cart-items p {
+.cart-item p {
   align-items: center;
   margin: 10px;
 }
 
-.cart-items button {
+.cartbtn {
   padding: 0px 3px;
   width: 40px;
   border-radius: 2px;
   margin-bottom: 0px;
+  margin-right: 5px;
+  background-color: rgb(120, 69, 69);
+  color: white;
+  border: none;
+  cursor: pointer;
 }
 
 .cart-elements {
@@ -42,3 +46,4 @@
   font-size: 1.2em;
   align-items: center;
 }
+

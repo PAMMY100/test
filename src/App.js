@@ -5,18 +5,26 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import Gallery from './pages/Gallery'
 import Cart from './pages/Cart'
-import Authentication from './pages/Authentication'
+import Authentication, { action as authAction } from './pages/Authentication'
+import {action as logoutAction} from './pages/Logout'
+import ErrorPage from './pages/Error'
+
 
 
 const router = createBrowserRouter([
   {
-    path: '/', element: <RootLayout />,
+    path: '/', 
+    element: <RootLayout />,
+    errorElement: <ErrorPage />,
     children: [
       { index : true, element: <Homepage />,},
       { path: 'gallery', element: <Gallery />},
       {path: 'about', element: <About />},
       {path: 'contact', element: <Contact />},
-      {path: 'auth', element: <Authentication />},
+      {path: 'auth', element: <Authentication />,
+      action: authAction },
+      {path: 'logout', action:logoutAction,
+      },
       {path: 'cart', element: <Cart/>}
     ]
   }

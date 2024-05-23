@@ -8,6 +8,7 @@
   display: flex;
   gap: 2em;
   margin: 0 auto;
+  cursor: pointer;
 }
 
 .links {
@@ -15,4 +16,5 @@
   gap: 4em;
   margin: 0 auto;
   margin-bottom: 1.5em;
+  cursor: pointer;
 }

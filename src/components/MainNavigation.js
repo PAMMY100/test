@@ -41,7 +41,7 @@ export default function MainNavigation () {
         </ul>
         <div className='cartContainer'>
           <Link to="/auth?mode=login"><Button>{isLogin ? 'Signup' : 'Login'}</Button></Link>
-          <Link to='/cart'>
+          <Link to={`${count > 0 ? '/cart' : '/'}`}>
             <div className='cartDiv'>
               <p className='count'>{count > 0 && (count)}</p>
               <img className='cartImg' src={cart} alt=""/>

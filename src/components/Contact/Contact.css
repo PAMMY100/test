@@ -1,7 +1,7 @@
 .contact {
   display: flex;
-  gap: 1em;
-  margin: 0 5%;
+  gap: 3rem;
+  padding: 10% 10%;
   margin-bottom: 2em;
 }
 
@@ -64,7 +64,7 @@ img {
 .contact-form input,
 .contact-form textarea {
   font: inherit;
-  width: 400px;
+  width: 100%;
   padding: 0.25rem;
   margin-bottom: 10px;
 }
@@ -83,14 +83,36 @@ img {
 }
 
 .col2 p {
+  margin-top: 14px;
   margin-right: 10px;
 }
 
 .btn{
-  width: 400px;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
   border: 1px solid rgb(120, 69, 69);
+  border-radius: 10px;
   font-size: 1em;
   text-align: center;
   background-color: rgb(120, 69, 69);
   color: white;
+}
+
+@media (max-width: 767px) {
+  .contact {
+    padding: 10px 10%;
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .contact {
+    padding: 10px 5px;
+  }
 }

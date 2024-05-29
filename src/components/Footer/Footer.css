@@ -18,3 +18,14 @@
   margin-bottom: 1.5em;
   cursor: pointer;
 }
+
+@media(max-width: 575px) {
+  .socials {
+    margin: 0 auto;
+  }
+  .links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+}

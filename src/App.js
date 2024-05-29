@@ -5,15 +5,14 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import Gallery from './pages/Gallery'
 import Cart from './pages/Cart'
-import Authentication, { action as authAction } from './pages/Authentication'
+import Authentication from './pages/Authentication'
 import {action as logoutAction} from './pages/Logout'
 import ErrorPage from './pages/Error'
 
 
-
 const router = createBrowserRouter([
   {
-    path: '/', 
+    path: '/',
     element: <RootLayout />,
     errorElement: <ErrorPage />,
     children: [
@@ -21,8 +20,7 @@ const router = createBrowserRouter([
       { path: 'gallery', element: <Gallery />},
       {path: 'about', element: <About />},
       {path: 'contact', element: <Contact />},
-      {path: 'auth', element: <Authentication />,
-      action: authAction },
+      {path: 'auth', element: <Authentication />},
       {path: 'logout', action:logoutAction,
       },
       {path: 'cart', element: <Cart/>}

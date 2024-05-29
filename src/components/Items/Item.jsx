@@ -11,7 +11,7 @@ const Item = (props) => {
 
   return (
     <div className="item">
-      <img src={props.img} alt={props.category}/>
+      <img src={props.img} className='model-img' alt={props.category}/>
       <p>{props.category}</p>
       <p className="item-price">${props.price}</p>
       <button className='product-btn' onClick={addItemToCart}>Add to Cart</button>

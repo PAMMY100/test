@@ -8,19 +8,7 @@ const ContactComp = () => {
   return (
     <>
       <div className='contact'>
-        <div className='contact-text'>
-          <h1>Contact Us</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero</p>
-          <div className='email'>
-            <img src={email} alt="" />
-            <p>imginfo@snapit.com</p>
-          </div>
-          <div className='tel'>
-            <img src={mobile} alt="" />
-            <p>Support<span>(+21) 123 456</span></p>
-          </div>
-        </div>
-        <Form className='contact-form'>
+      <Form className='contact-form'>
           <h1>We'd love to hear from you!</h1>
           <h2>Let's get in touch</h2>
           <div className="col2">
@@ -45,6 +33,18 @@ const ContactComp = () => {
             <button className='btn'>Send Message</button>
           </div>
         </Form>
+        <div className='contact-text'>
+          <h1>Contact Us</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero</p>
+          <div className='email'>
+            <img src={email} alt="" />
+            <p>imginfo@snapit.com</p>
+          </div>
+          <div className='tel'>
+            <img src={mobile} alt="" />
+            <p>Support<span>(+21) 123 456</span></p>
+          </div>
+        </div>
       </div>
       <Footer />
     </>

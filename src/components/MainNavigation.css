@@ -1,7 +1,12 @@
 header {
-  padding-top: 20px;
-  margin: 0 5%;
+  padding: 10px 5%;
   margin-bottom: 3em;
+  position: fixed;
+  height: 100px;
+  width: 100%;
+  z-index: 100;
+  background-color: #fff;
+  overflow: hidden;
   display: flex;
   justify-content: space-between;
 }
@@ -34,6 +39,7 @@ a {
   text-decoration: none;
   color: rgb(152, 7, 7);
   font-size: 1.2em;
+  cursor: pointer;
 }
 a:hover {
   color: red;
@@ -127,14 +133,14 @@ a:active {
     height: 200px;
     width: 150px;
     background-color: #cbcaca;
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 55px;
-    z-index: 2;
+    z-index: 200;
+    transition: 8s ease-in-out;
   }
   .nav-container {
     transform: translateX(100%, 0);
-    transition: all 0.25s
   }
 
   .nav-menu-visible {
@@ -152,8 +158,14 @@ a:active {
     margin: 0;
     border-radius: unset;
   }
-
-  .cartImg {
-    display: none;
+  .cartDiv {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background-color: #cbcaca;
+  }
+  .count {
+    margin-top: 2px;
+    right: 58px;
   }
 }

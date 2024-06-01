@@ -14,17 +14,17 @@ import m13 from '../../assets/Male-models/m13.webp'
 import m14 from '../../assets/Male-models/m15.webp'
 import m15 from '../../assets/Male-models/m16.webp'
 import m16 from '../../assets/Male-models/m18.webp'
-import f1 from '../../assets/Female-models/f1.jpeg'
-import f2 from '../../assets/Female-models/f2.jpeg'
-import f3 from '../../assets/Female-models/f3.jpeg'
+import f1 from '../../assets/Female-models/f1.jpg'
+import f2 from '../../assets/Female-models/f2.jpg'
+import f3 from '../../assets/Female-models/f3.jpg'
 import f4 from '../../assets/Female-models/f4.jpeg'
-import f5 from '../../assets/Female-models/f5.jpeg'
-import f6 from '../../assets/Female-models/f6.jpeg'
+import f5 from '../../assets/Female-models/f5.jpg'
+import f6 from '../../assets/Female-models/f6.jpg'
 import f7 from '../../assets/Female-models/f7.jpeg'
 import f8 from '../../assets/Female-models/f8.jpeg'
 import f9 from '../../assets/Female-models/f9.webp'
-import f10 from '../../assets/Female-models/f10.webp'
-import f11 from '../../assets/Female-models/f11.webp'
+import f10 from '../../assets/Female-models/f10.jpeg'
+import f11 from '../../assets/Female-models/f11.jpg'
 
 
 const products = [
@@ -32,37 +32,37 @@ const products = [
     id : 1,
     img: m1,
     category: 'male',
-    price: 100.00
+    price: 50.00
   },
   {
     id : 2,
     img: m2,
     category: 'male',
-    price: 180.00
+    price: 80.00
   },
   {
     id : 3,
     img: f1,
     category: 'female',
-    price: 100.00
+    price: 40.00
   },
   {
     id : 4,
     img: f2,
     category: 'female',
-    price: 200.00
+    price: 50.00
   },
   {
     id : 5,
     img: m3,
     category: 'male',
-    price: 200.00
+    price: 70.00
   },
   {
     id : 6,
     img: m4,
     category: 'male',
-    price: 220.00
+    price: 20.00
   },
   {
     id : 7,
@@ -74,7 +74,7 @@ const products = [
     id : 8,
     img: f4,
     category: 'female',
-    price: 120.00
+    price: 100.00
   },
   {
     id : 9,
@@ -86,25 +86,25 @@ const products = [
     id : 10,
     img: f5,
     category: 'female',
-    price: 120.00
+    price: 80.00
   },
   {
     id : 11,
     img: m6,
     category: 'male',
-    price: 150.00
+    price: 50.00
   },
   {
     id : 12,
     img: f6,
     category: 'female',
-    price: 200.00
+    price: 20.00
   },
   {
     id : 13,
     img: m7,
     category: 'male',
-    price: 100.00
+    price: 90.00
   },
   {
     id : 14,
@@ -128,19 +128,19 @@ const products = [
     id : 17,
     img: m9,
     category: 'male',
-    price: 100.00
+    price: 50.00
   },
   {
     id : 18,
     img: f9,
     category: 'female',
-    price: 100.00
+    price: 20.00
   },
   {
     id : 19,
     img: m10,
     category: 'male',
-    price: 100.00
+    price: 70.00
   },
   {
     id : 20,
@@ -152,19 +152,19 @@ const products = [
     id : 21,
     img: m11,
     category: 'male',
-    price: 120.00
+    price: 100.00
   },
   {
     id : 22,
     img: f11,
     category: 'female',
-    price: 100.00
+    price: 80.00
   },
   {
     id : 23,
     img: m12,
     category: 'male',
-    price: 100.00
+    price: 50.00
   },
   {
     id : 24,

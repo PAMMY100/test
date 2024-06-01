@@ -1,14 +1,17 @@
 header {
-  padding: 10px 5%;
+  padding: 0 5%;
+  margin-top: 0;
   margin-bottom: 3em;
   position: fixed;
-  height: 100px;
+  height: 90px;
+  box-shadow: 0 1px 0.5px rgba(0, 0, 0, .1);
   width: 100%;
   z-index: 100;
   background-color: #fff;
   overflow: hidden;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
@@ -93,15 +96,16 @@ a:active {
 }
 
 @media (max-width: 991px) {
-  .header {
-    padding: 10px 0px;
-  }
   .cart {
     transform: scale(0.8)
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 834px) {
+  .header {
+    padding: 0 0;
+    overflow-y: hidden;
+  }
   .navMenu a {
     font-size: 1rem;
   }
@@ -135,7 +139,7 @@ a:active {
     background-color: #cbcaca;
     position: fixed;
     right: 0;
-    top: 55px;
+    top: 64px;
     z-index: 200;
     transition: 8s ease-in-out;
   }

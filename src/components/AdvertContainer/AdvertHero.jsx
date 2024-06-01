@@ -6,9 +6,9 @@ import {Swiper, SwiperSlide} from 'swiper/react'
 
 import 'swiper/css'
 import img1 from '../../assets/Male-models/m16.webp'
-import img2 from '../../assets/Female-models/f3.jpeg'
+import img2 from '../../assets/Female-models/f1.jpg'
 import img3 from '../../assets/Male-models/m2.jpeg'
-import img4 from '../../assets/Female-models/f11.webp'
+import img4 from '../../assets/Female-models/f2.jpg'
 import img5 from '../../assets/Male-models/m11.webp'
 import img6 from '../../assets/Female-models/f4.jpeg'
 
@@ -93,8 +93,8 @@ const AdvertHero = () => {
       }}
       >
         {
-          slider.map(data => (
-            <SwiperSlide style={{ backgroundImage: `url(${data.url})`}} className='myswiper-slider' >
+          slider.map((data, index) => (
+            <SwiperSlide key={index} style={{ backgroundImage: `url(${data.url})`}} className='myswiper-slider' >
               <div key={data.title}>
                 <h2>{data.title}</h2>
                 <p>{data.desription}</p>

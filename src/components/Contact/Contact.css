@@ -99,11 +99,13 @@ img {
   color: white;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 834px) {
   .contact {
-    padding: 10px 10%;
+    padding: 15% 10%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .contact-form input,
   .contact-form textarea {

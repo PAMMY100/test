@@ -1,4 +1,4 @@
-import { NavLink, Link, useSearchParams } from 'react-router-dom'
+import { NavLink, Link, useSearchParams, Form } from 'react-router-dom'
 import './MainNavigation.css'
 import Button from './ui/Button'
 import { useSelector } from 'react-redux'
@@ -6,6 +6,7 @@ import cart from '../assets/cart_icon.png'
 import menu from '../assets/icons8-menu-64.png'
 import close from '../assets/icons8-close-window-48.png'
 import { useRef, useState } from 'react'
+import { getAuthToken, useName } from '../utils'
 
 
 export default function MainNavigation () {
@@ -14,8 +15,9 @@ export default function MainNavigation () {
   const [searchParams] = useSearchParams();
   const count = useSelector(state => state.cart.totalQuantity)
   const isLogin = searchParams.get('mode') === 'login'
+  const token = getAuthToken()
+  const { fetchdata } = useName()
 
-  
   const handleToggleMenu = () => {
     setToggleMenu(prev => !prev)
     menuRef.current.classList.toggle('nav-menu-visible')
@@ -40,13 +42,17 @@ export default function MainNavigation () {
           <li><NavLink to='/contact' className={({isActive}) => isActive ? 'active' : undefined}>CONTACT</NavLink></li>
         </ul>
         <div className='cartContainer'>
-          <Link to="/auth?mode=login"><Button>{isLogin ? 'Signup' : 'Login'}</Button></Link>
+          {!token && <Link to="/auth?mode=login"><Button>{isLogin ? 'Signup' : 'Login'}</Button></Link>}
+          {fetchdata && <p>{fetchdata}</p>}
           <Link to={`${count > 0 ? '/cart' : '/'}`}>
             <div className='cartDiv'>
               <p className='count'>{count > 0 && (count)}</p>
               <img className='cartImg' src={cart} alt=""/>
             </div>
           </Link>
+          {token && <Form method='post' action='/logout'>
+            <button>Logout</button>
+          </Form>}
         </div>
       </div>
     </header>

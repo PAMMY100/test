@@ -1,7 +1,24 @@
+
+.authContainer {
+  padding: 15%;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  overflow-y: hidden;
+  position: fixed;
+}
+
+.display-pic img {
+  width: 400px;
+  height: 400px;
+  object-fit: contain;
+}
+
 .form {
-  max-width: 40rem;
-  margin: 2rem auto;
-  padding-top: 10%;
+  width: 500px;
+  padding: 0 2%;
+  margin-left: 0;
+  overflow-y: hidden;
 }
 
 .form h1 {
@@ -60,4 +77,27 @@
   scale: 1.2;
   text-decoration: underline;
   transition: 0.5s ease-in;
+}
+
+@media (max-width: 834px) {
+  .authContainer {
+    padding: 40% 5%;
+    gap: 0.2px;
+  }
+
+  .form {
+    width: 300px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 575px) {
+  .display-pic img {
+    display: none;
+  }
+
+  .form {
+    padding: 45% 10%;
+    width: 350px;
+  }
 }

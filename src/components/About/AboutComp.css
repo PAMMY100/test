@@ -1,4 +1,6 @@
-.about 
+.about {
+  padding: 10% 0;
+}
 .col1 {
   display: flex;
   flex-direction: column;
@@ -10,6 +12,7 @@
 
 .col1 h1 {
   text-align: center;
+  margin-top: 10px;
 }
 
 .col1 img {
@@ -50,7 +53,16 @@
   object-fit: cover;
 }
 
+@media (max-width: 767px) {
+  .about {
+    padding: 20% 0;
+  }
+}
+
 @media (max-width: 575px) {
+  .about {
+    padding: 25% 0;
+  }
   .meet-team {
     margin: 0 5%;
   }

@@ -7,6 +7,7 @@ const Item = (props) => {
 
   const addItemToCart = () => {
     dispatch(cartActions.addToCart({ id, category, img, price}))
+    alert('Item added to cart')
   }
 
   return (

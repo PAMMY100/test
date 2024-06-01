@@ -1,20 +1,21 @@
-import { Link, useSearchParams, useNavigation, Form } from 'react-router-dom'
+import { Link, useSearchParams, Form } from 'react-router-dom'
 import './Authform.css'
 import { useState } from 'react';
-import { loginUser, signupUser } from '../../utils';
+import { useSignup } from '../../utils';
+import displayImg from '../../assets/login-display-img.jpg'
 
 
 const Authform = () => {
    const [searchParams] = useSearchParams();
-  const nagivation = useNavigation();
   const [formData, setFormData] = useState({
     username: '',
     email: '',
     password: "",
   })
+  const {error, state, fetcher} = useSignup()
 
   const isLogin = searchParams.get('mode') === 'login'
-  const isSubmitting = nagivation.state === 'submitting'
+  // const isSubmitting = nagivation.state === 'submitting'
 
   const handleChange = (e) => {
     setFormData({...formData, [e.target.name]: e.target.value})
@@ -22,18 +23,22 @@ const Authform = () => {
 
   const login = async () => {
     console.log("Logging in data", formData);
-    loginUser(formData)
+    fetcher(formData)
   }
 
   const signup = async (e) => {
     console.log("signing up data", formData)
-    signupUser(formData)
+    fetcher(formData)
   }
 
   return (
-    <>
+    <div className='authContainer'>
+      <div className='display-pic'>
+        <img src={displayImg} alt="display"/>
+      </div>
       <Form className='form'>
         <h1>{isLogin ? 'Log in' : 'Sign up'}</h1>
+        {error && <p>User Registration fails! use a unique details</p>}
         {!isLogin && <p>
           <label htmlFor="username">username</label>
           <input
@@ -67,10 +72,10 @@ const Authform = () => {
         </p>
         <div className='actions'>
           <Link to={`?mode= ${isLogin ? 'signup' : 'login'}`}>{isLogin ? 'Register' : 'Login'}</Link>
-          <button onClick={() => isLogin ? login(): signup()}>{isSubmitting ? 'Submitting...' : `${isLogin ? 'Login' : 'Save'}`}</button>
+          <button onClick={() => isLogin ? login(): signup()}>{state ? 'Submitting...' : `${isLogin ? 'Login' : 'Save'}`}</button>
         </div>
       </Form>
-    </>
+    </div>
   )
 }
 
